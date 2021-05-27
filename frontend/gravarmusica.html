@@ -4,45 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artista</title>
-    <script type="text/javascript" src="js/artista.js" ></script>
+    <title>Musica</title>
+    <script type="text/javascript" src="js/savemusic.js" ></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
-<body>
+<body onload="preencherartistas()">
     <div class= "container">
     <br>
-    <h3 style= "text-align: center;">Gravar Artistas</h3>
+    <h3 style= "text-align: center;">Gravar Musicas</h3>
     
     <br><br>
     <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">Nome Artistico</span>
+          <span class="input-group-text" id="basic-addon1">Titulo</span>
         </div>
-        <input id="txtnome" type="text" class="form-control" placeholder="Nome Artistico" aria-label="Username" aria-describedby="basic-addon1">
+        <input id="txttitulo" type="text" class="form-control" placeholder="Titulo da Musica" aria-label="Username" aria-describedby="basic-addon1">
       </div>
 
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">Nacionalidade</span>
+          <span class="input-group-text" id="basic-addon1">Cadastro</span>
         </div>
-        <input id="txtnacionalidade" type="text" class="form-control" placeholder="Nacionalidade" aria-label="Username" aria-describedby="basic-addon1">
+        <input id="txtcadastro" type="text" class="form-control" placeholder="Cadastro" aria-label="Username" aria-describedby="basic-addon1">
       </div>
 
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Estilo Musical</label>
+          <span class="input-group-text" id="basic-addon1">Lançamento</span>
         </div>
-        <select class="custom-select" id="cmbestilos">
-          <option >MPB</option>
-          <option >Rock</option>
-          <option >POP</option>
-        </select>
+        <input id="txtlancamento" type="text" class="form-control" placeholder="Lançamento" aria-label="Username" aria-describedby="basic-addon1">
       </div>
+
+      <br><br>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="cmbartistas">Artistas</label>
+        </div>
+        <select class="custom-select" id="cmbartistas"> </select>
+      </div>
+
+ 
 
       <br><br>
       <button onclick="gravar()" type="button" class="btn btn-primary">Gravar</button>
       <br><br>
-      <button onclick="window.location='user.html'" type="button" class="btn btn-primary">Voltar</button>
+      <button onclick="window.location='music.html'" type="button" class="btn btn-primary">Voltar</button>
       
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
